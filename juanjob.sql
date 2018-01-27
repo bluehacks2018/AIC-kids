@@ -95,6 +95,9 @@ ALTER TABLE `job`
   ADD PRIMARY KEY (`job_id`),
   ADD UNIQUE KEY `JOB_TITLE` (`job_title`);
 
+ALTER TABLE `job`
+  MODIFY `job_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- Indexes for table `job_provider`
 --
@@ -116,12 +119,18 @@ ALTER TABLE `job_request`
   ADD PRIMARY KEY (`request_id`),
   ADD KEY `job_id` (`job_id`);
 
+ALTER TABLE `job_request`
+  MODIFY `request_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- Indexes for table `provider`
 --
 ALTER TABLE `provider`
   ADD PRIMARY KEY (`provider_id`),
   ADD UNIQUE KEY `CONTACT_NO` (`contact`);
+
+ALTER TABLE `provider`
+  MODIFY `provider_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables
