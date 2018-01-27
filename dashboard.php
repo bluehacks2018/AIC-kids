@@ -1,3 +1,7 @@
+<?php
+  session_start();
+  // $query = "SELECT * FROM provider where provider_id = $_SESSION['id']";
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,7 +37,7 @@
         <hr class="star-dark mb-5">
         <div class="row">
           <div class="col-lg-4 ml-auto">
-            Contact Number: _09999999999_
+            Contact Number: <?php echo $_SESSION['id']; ?>
           </div>
           <div class="col-lg-4 mr-auto">
             Address: _15 M.H. del Pilar, Malate Manila_

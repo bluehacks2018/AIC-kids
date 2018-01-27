@@ -11,11 +11,22 @@
 	$street = $_POST["street"];
 	$brgy = $_POST["barangay"];
 	$city = $_POST["city"];
+	$pass = $_POST["password"];
 
-	$query = "INSERT INTO `provider`(`first_name`, `last_name`, `street`, `brgy`, `city`, `contact`) VALUES ('$first_name', '$last_name', '$street', '$brgy', '$city', '$contact')";
+	$conf = $_POST["password_confirm"];
 
-	if (!mysqli_query($conn, $query))
-		echo "Not connected";
+	if ($conf != $pass){
+		header('Location: registration.php');
+		echo "Passwords don't match";	
+	}
+	else {
+		$query = "INSERT INTO `provider`(`first_name`, `last_name`, `street`, `brgy`, `city`, `contact`, `password`) VALUES ('$first_name', '$last_name', '$street', '$brgy', '$city', '$contact', md5('$pass'))";
+		if (mysqli_query($conn, $query))
+			header('Location: index.php');
+		else
+			header('Location: registration.php');
 
-	header('Location: index.php');
+	}
+
+
 ?>
