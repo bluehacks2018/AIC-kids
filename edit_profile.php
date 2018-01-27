@@ -1,24 +1,12 @@
+<!DOCTYPE html>
 <html>
-<<<<<<< HEAD
-<body>
-
-<form action="register.php" method="post">
-Name: <input type="text" name="first_name"><br>
-E-mail: <input type="text" name="last_name"><br>
-Name: <input type="text" name="street"><br>
-E-mail: <input type="text" name="barangay"><br>
-Name: <input type="text" name="city"><br>
-Name: <input type="text" name="contact"><br>
-<input type="submit">
-</form>
-=======
 <head>
-	<title>Registration - <?php include("name.php") ?> </title>
+	<title>Edit Profile - <?php include("name.php") ?> </title>
 	<?php include("header.php") ?>
 </head>
 <body class="non-signin">
 
-  <!-- <?php include("navbar.php") ?>-->
+  <?php include("navbar.php") ?>
 
 	<div class="container-fluid">
     <div class="row">
@@ -28,7 +16,7 @@ Name: <input type="text" name="contact"><br>
           <fieldset>
 
           <!-- Form Name -->
-          <legend>Registration</legend>
+          <legend>Edit Profile</legend>
 
           <!-- Text input-->
           <div class="form-group">
@@ -53,23 +41,6 @@ Name: <input type="text" name="contact"><br>
             <label class="col-md-12 control-label" for="contact">Contact</label>  
             <div class="col-md-12">
             <input id="contact" name="contact" type="text" placeholder="09999999999" class="form-control input-md" required="">
-              
-            </div>
-          </div>
-
-          <!-- Text input-->
-          <div class="form-group">
-            <label class="col-md-12 control-label" for="password">Password</label>  
-            <div class="col-md-12">
-            <input id="password" name="password" type="password" class="form-control input-md" required="">
-              
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="col-md-12 control-label" for="password_confirm">Confirm Password</label>  
-            <div class="col-md-12">
-            <input id="password_confirm" name="password_confirm" type="password" class="form-control input-md" required="">
               
             </div>
           </div>
@@ -106,7 +77,7 @@ Name: <input type="text" name="contact"><br>
             <label class="col-md-12 control-label" for="submit"></label>
             <div class="col-md-12">
               <center>
-                <button id="submit" name="submit" class="btn btn-primary">Submit</button>
+                <button id="submit" name="submit" class="btn btn-primary">Save Profile</button>
               </center>
             </div>
           </div>
@@ -116,7 +87,6 @@ Name: <input type="text" name="contact"><br>
       </div>
     </div>
   </div>
->>>>>>> c5d20d27846100112472b6fee13ceac3dbeb6c7a
 
 </body>
 </html>
