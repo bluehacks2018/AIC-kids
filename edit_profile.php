@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Registration - <?php include("name.php") ?> </title>
+	<title>Edit Profile - <?php include("name.php") ?> </title>
 	<?php include("header.php") ?>
 </head>
 <body class="non-signin">
 
-  <!-- <?php include("navbar.php") ?>-->
+  <?php include("navbar.php") ?>
 
 	<div class="container-fluid">
     <div class="row">
@@ -16,7 +16,7 @@
           <fieldset>
 
           <!-- Form Name -->
-          <legend>Registration</legend>
+          <legend>Edit Profile</legend>
 
           <!-- Text input-->
           <div class="form-group">
@@ -41,23 +41,6 @@
             <label class="col-md-12 control-label" for="contact">Contact</label>  
             <div class="col-md-12">
             <input id="contact" name="contact" type="text" placeholder="09999999999" class="form-control input-md" required="">
-              
-            </div>
-          </div>
-
-          <!-- Text input-->
-          <div class="form-group">
-            <label class="col-md-12 control-label" for="password">Password</label>  
-            <div class="col-md-12">
-            <input id="password" name="password" type="password" class="form-control input-md" required="">
-              
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="col-md-12 control-label" for="password_confirm">Confirm Password</label>  
-            <div class="col-md-12">
-            <input id="password_confirm" name="password_confirm" type="password" class="form-control input-md" required="">
               
             </div>
           </div>
@@ -94,7 +77,7 @@
             <label class="col-md-12 control-label" for="submit"></label>
             <div class="col-md-12">
               <center>
-                <button id="submit" name="submit" class="btn btn-primary">Submit</button>
+                <button id="submit" name="submit" class="btn btn-primary">Save Profile</button>
               </center>
             </div>
           </div>

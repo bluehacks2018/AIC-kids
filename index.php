@@ -7,6 +7,7 @@
 	</head>
 
 	<body class="text-center">
+    <?php include("navbar.php") ?>
     <form class="form-signin">
       <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
       <label for="inputEmail" class="sr-only">Email address</label>
