@@ -1,4 +1,3 @@
-
 <html>
 	<head>
 		<title>Login - <?php include("name.php") ?></title>
