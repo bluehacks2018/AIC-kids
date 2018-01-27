@@ -91,7 +91,7 @@ CREATE TABLE `provider` (
 
 INSERT INTO `provider` (`provider_id`, `first_name`, `last_name`, `street`, `brgy`, `city`, `contact`, `password`) VALUES
 (1, 'aaaaaaaaaa', 'aaaaaaaaaa', 'aaaaaaaaaa', 'Last Name', 'sdafasf', 'asfasfhfd', ''),
-(2, '', '', '', '', '', '', ''),
+(2, 'hey', 'hey', 'hey', 'hey', 'hey', 'hey', 'hey'),
 (4, 'First Name', 'First Name', 'First Name', 'First Name', 'First Name', 'First Name', ''),
 (5, 'Contact', 'Contact', 'Contact', 'Contact', 'Contact', 'Contact', ''),
 (6, 'Confirm Password', 'Confirm Password', 'Confirm Password', 'Confirm Password', 'Confirm Password', 'Confirm Pas', ''),
