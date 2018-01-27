@@ -13,8 +13,8 @@
     <?php include("navbar.php") ?>
     <form class="form-signin" action="login.php" method="post">
       <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-      <label for="inputEmail" class="sr-only">Email address</label>
-      <input type="text" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="" name="contact">
+      <label for="inputEmail" class="sr-only">Contact Number</label>
+      <input type="text" id="inputEmail" class="form-control" placeholder="09XXXXXXXXX" required="" autofocus="" name="contact">
       <label for="inputPassword" class="sr-only">Password</label>
       <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required="">
       <div class="checkbox mb-3">
