@@ -12,6 +12,7 @@
 	$brgy = $_POST["barangay"];
 	$city = $_POST["city"];
 	$pass = $_POST["password"];
+	$job_id = $_POST["job"];
 
 	$conf = $_POST["password_confirm"];
 
@@ -21,8 +22,19 @@
 	}
 	else {
 		$query = "INSERT INTO `provider`(`first_name`, `last_name`, `street`, `brgy`, `city`, `contact`, `password`) VALUES ('$first_name', '$last_name', '$street', '$brgy', '$city', '$contact', md5('$pass'))";
-		if (mysqli_query($conn, $query))
-			header('Location: index.php');
+		if (mysqli_query($conn, $query)){
+			$last_insert = mysqli_insert_id($conn);
+			$job_query = "INSERT INTO `job_provider`(`job_id`, `provider_id`) VALUES ('$job_id', '$last_insert')";
+			echo $job_query;
+			// mysqli_query($conn, $job_query);
+			if(mysqli_query($conn, $job_query)){
+				header('Location: index.php');
+			}
+			else {
+				header('Location: lorem.php');
+			}
+			
+		}		
 		else
 			header('Location: registration.php');
 

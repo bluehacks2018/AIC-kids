@@ -6,10 +6,20 @@
   $temp = mysqli_query($conn, $query);
   $row = mysqli_fetch_assoc($temp);
 
-  if (!isset($_POST['contact'])){
-    echo "haha";
-    header('Location: index.php');  
-  }
+  $job_query = "SELECT * FROM job_provider where provider_id = $id";
+  $job_temp = mysqli_query($conn, $job_query);
+  $job_row = mysqli_fetch_assoc($job_temp);
+
+  $job_id = $job_row['job_id'];
+
+  $job_name_query = "SELECT * FROM job where job_id = $job_id";
+  $job_name_temp = mysqli_query($conn, $job_name_query);
+  $job_name_row = mysqli_fetch_assoc($job_name_temp);
+
+  // if (!isset($_POST['contact'])){
+  //   echo "haha";
+  //   header('Location: index.php');  
+  // }
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,12 +40,12 @@
 </head>
 <body>
 	<?php include("navbar.php") ?>
-	<!-- Header -->
+	<!-- Header  -->
     <header class="masthead bg-primary text-white text-center">
       <div class="container">
         <h1 class="text-uppercase mb-0"><?php echo $row['first_name']. " ".$row['last_name']; ?></h1>
         <hr class="star-light">
-        <h2 class="font-weight-light mb-0">_JOB(S)_</h2>
+        <h2 class="font-weight-light mb-0"><?php echo $job_name_row['job_title']; ?></h2>
       </div>
     </header>
 
