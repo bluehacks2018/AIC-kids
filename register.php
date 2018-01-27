@@ -1,4 +1,5 @@
 <?php 
+	session_start();
 	$conn = mysqli_connect('127.0.0.1', 'root', '', 'juanjob');
 
 	if (!$conn){
@@ -29,6 +30,7 @@
 			// mysqli_query($conn, $job_query);
 			if(mysqli_query($conn, $job_query)){
 				header('Location: index.php');
+				$_SESSION['success'] = true;
 			}
 			else {
 				header('Location: lorem.php');
