@@ -13,6 +13,7 @@
 	$row = mysqli_fetch_assoc($result);
 	if ($row['provider_id'] > 0){
 		$_SESSION['id'] = $row['provider_id'] ;
+		$_SESSION['check'] = true;
 		header('Location: dashboard.php');
 	} else{
 		header('Location: index.php');
