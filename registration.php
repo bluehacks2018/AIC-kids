@@ -12,7 +12,7 @@
     <div class="row">
       <div class="col-md-4"></div>
       <div class="col-md-4 custom-content-registration">
-        <form class="form-horizontal">
+        <form class="form-horizontal" method="post" action="register.php">
           <fieldset>
 
           <!-- Form Name -->
@@ -84,7 +84,7 @@
           <div class="form-group">
             <label class="col-md-12 control-label" for="City">City</label>  
             <div class="col-md-12">
-            <input id="City" name="City" type="text" placeholder="" class="form-control input-md">
+            <input id="City" name="city" type="text" placeholder="" class="form-control input-md">
               
             </div>
           </div>

@@ -12,15 +12,10 @@
 	$brgy = $_POST["barangay"];
 	$city = $_POST["city"];
 
-	$st = "sssds";
-
-	$query = "INSERT INTO test (`col1`) VALUES ('$st')";
-
-	$query2 = "SELECT * FROM provider where first_name = 'aa'";
+	$query = "INSERT INTO `provider`(`first_name`, `last_name`, `street`, `brgy`, `city`, `contact`) VALUES ('$first_name', '$last_name', '$street', '$brgy', '$city', '$contact')";
 
 	if (!mysqli_query($conn, $query))
 		echo "Not connected";
-	else
-		echo "success"
 
+	header('Location: index.php');
 ?>
