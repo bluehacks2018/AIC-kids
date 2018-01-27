@@ -5,6 +5,7 @@
   $query = "SELECT * FROM provider where provider_id = $id";
   $temp = mysqli_query($conn, $query);
   $row = mysqli_fetch_assoc($temp);
+<<<<<<< HEAD
 
   $job_query = "SELECT * FROM job_provider where provider_id = $id";
   $job_temp = mysqli_query($conn, $job_query);
@@ -20,6 +21,12 @@
   //   echo "haha";
   //   header('Location: index.php');  
   // }
+=======
+  $pass = $row['password'];
+  $username = $row['contact'];
+  if ($id < 1)
+    header('Location: index.php');
+>>>>>>> 08f997355933182696cd137991a03d7b0e22c1b3
 ?>
 <!DOCTYPE html>
 <html>
