@@ -5,6 +5,11 @@
   $query = "SELECT * FROM provider where provider_id = $id";
   $temp = mysqli_query($conn, $query);
   $row = mysqli_fetch_assoc($temp);
+
+  if (!isset($_POST['contact'])){
+    echo "haha";
+    header('Location: index.php');  
+  }
 ?>
 <!DOCTYPE html>
 <html>
