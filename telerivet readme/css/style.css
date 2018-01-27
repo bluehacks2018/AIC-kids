@@ -1,0 +1,16 @@
+body.non-signin {
+	background: #d6d7d8;
+}
+
+.custom-content {
+	background: white;
+	margin-top: 100px;
+	margin-bottom: 50px;
+	padding: 20px;
+}
+.custom-content-registration {
+	background: white;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	padding: 20px;
+}
