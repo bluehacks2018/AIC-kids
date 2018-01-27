@@ -7,8 +7,9 @@
   $row = mysqli_fetch_assoc($temp);
   $pass = $row['password'];
   $username = $row['contact'];
-  if ($id < 1)
+  if ($id < 1){
     header('Location: index.php');
+  }
 ?>
 <!DOCTYPE html>
 <html>

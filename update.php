@@ -13,6 +13,7 @@
 	$brgy = $_GET['barangay'];
 	$city = $_GET['city'];
 
-	$query = "UPDATE provider SET `first_name`='$first_name', last_name='$last_name', `contact`='$contact', `street`='$street', `brgy`='$barangay', `city`='$city'" WHERE '$id';
+	$query = "UPDATE provider SET `first_name`='$first_name', last_name='$last_name', `contact`='$contact', `street`='$street', `brgy`='$barangay', `city`='$city' WHERE provider_id = '$id'";
 	mysqli_query($conn, $query);
+	header('Location: dashboard.php');
 ?>
