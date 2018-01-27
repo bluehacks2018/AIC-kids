@@ -1,24 +1,12 @@
+<!DOCTYPE html>
 <html>
-<<<<<<< HEAD
-<body>
-
-<form action="register.php" method="post">
-Name: <input type="text" name="first_name"><br>
-E-mail: <input type="text" name="last_name"><br>
-Name: <input type="text" name="street"><br>
-E-mail: <input type="text" name="barangay"><br>
-Name: <input type="text" name="city"><br>
-Name: <input type="text" name="contact"><br>
-<input type="submit">
-</form>
-=======
 <head>
 	<title>Registration - <?php include("name.php") ?> </title>
 	<?php include("header.php") ?>
 </head>
 <body class="non-signin">
 
-  <!-- <?php include("navbar.php") ?>-->
+  <?php include("navbar.php") ?>
 
 	<div class="container-fluid">
     <div class="row">
@@ -116,7 +104,6 @@ Name: <input type="text" name="contact"><br>
       </div>
     </div>
   </div>
->>>>>>> c5d20d27846100112472b6fee13ceac3dbeb6c7a
 
 </body>
 </html>
