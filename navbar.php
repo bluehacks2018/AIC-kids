@@ -13,7 +13,7 @@
         <a class="nav-link" href="account.php">account</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-md-0">
+    <form class="form-inline my-2 my-md-0" action="logout.php" method="post">
       <button id="submit" name="submit" class="btn btn-danger">LOG OUT</button>
     </form>
   </div>

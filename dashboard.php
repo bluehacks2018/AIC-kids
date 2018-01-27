@@ -1,6 +1,10 @@
 <?php
   session_start();
-  // $query = "SELECT * FROM provider where provider_id = $_SESSION['id']";
+  $conn = mysqli_connect('127.0.0.1', 'root', '', 'juanjob');
+  $id = $_SESSION['id'];
+  $query = "SELECT * FROM provider where provider_id = $id";
+  $temp = mysqli_query($conn, $query);
+  $row = mysqli_fetch_assoc($temp);
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,7 +28,7 @@
 	<!-- Header -->
     <header class="masthead bg-primary text-white text-center">
       <div class="container">
-        <h1 class="text-uppercase mb-0">_NAME_</h1>
+        <h1 class="text-uppercase mb-0"><?php echo $row['first_name']. " ".$row['last_name']; ?></h1>
         <hr class="star-light">
         <h2 class="font-weight-light mb-0">_JOB(S)_</h2>
       </div>
@@ -37,10 +41,10 @@
         <hr class="star-dark mb-5">
         <div class="row">
           <div class="col-lg-4 ml-auto">
-            Contact Number: <?php echo $_SESSION['id']; ?>
+            Contact Number: <?php echo $row['contact']; ?>
           </div>
           <div class="col-lg-4 mr-auto">
-            Address: _15 M.H. del Pilar, Malate Manila_
+            Address: <?php echo $row['street']." ".$row['brgy']." ".$row['city'] ; ?>
           </div>
         </div>
       </div>
